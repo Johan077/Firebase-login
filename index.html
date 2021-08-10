@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Firebase</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!--Navbar Seccion-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item logged-out" style="display: none;">
+                        <a class="nav-link active" aria-current="page" href="#" data-toggle="modal"
+                            data-target="#singinmodal">Iniciar Sesion</a>
+                    </li>
+                    <li class="nav-item logged-out" style="display: none;">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#singupmodal">Registro</a>
+                    </li>
+                    <li class="nav-item loged-in" style="display: none;">
+                        <a class="nav-link" href="#" id="logout">logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- contenido principal -->
+
+    <div class="container p-2">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <ul class="list-group post">
+                    <li class="list-group-item"></li>
+                    <h3>Titulo</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda quos incidunt eum provident, aspernatur ex maxime at reprehenderit molestiae, optio laborum ad saepe nesciunt similique dignissimos distinctio. Quam, veritatis facere.
+                    Beatae est at exercitationem nihil quas odio iste ipsa incidunt consequatur rerum harum, modi consequuntur impedit itaque amet qui dolores unde provident eligendi rem saepe blanditiis recusandae. Facilis, nulla maxime.
+                    Unde incidunt pariatur, voluptatem, animi itaque sint quas nobis labore corrupti autem rerum dolor inventore debitis ab eligendi ipsum dolores! Ea cupiditate distinctio, assumenda impedit explicabo reiciendis quis odio aperiam.</p>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Seccion-->
+
+
+    <!-- Sing UP Modal -->
+    <div class="modal fade" id="singupmodal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Registro</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="singup-form">
+                        <div class="form-group">
+                            <input type="text" id="singup-email" class="form-control" placeholder="email" required>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="password" id="singup-password" class="form-control" placeholder="password"
+                                required>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-secondary btn-block">Registrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sing in Modal -->
+    <div class="modal fade" id="singinmodal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Inicio Sesion</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="login-form">
+                    <div class="form-group">
+                        <input type="text" id="login-email" class="form-control" placeholder="email" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="password" id="login-password" class="form-control" placeholder="password"
+                        required>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+                    <button type="button" class="btn btn-danger btn-block" id="google-log">Google</button>
+                    <button type="button" class="btn btn-primary btn-block" id="Face-log">Facebook</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- bootstrap Scripts -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+    <!-- FIrebase script -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAY51hGRAVkFL1y7LCyLXuImgCdnUruKAs",
+            authDomain: "fire-serv-52425.firebaseapp.com",
+            projectId: "fire-serv-52425",
+            storageBucket: "fire-serv-52425.appspot.com",
+            messagingSenderId: "986364494407",
+            appId: "1:986364494407:web:a765237da6142f7bd52762"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const fs = firebase.firestore();
+    </script>
+
+    <!-- custom code -->
+
+    <script type="text/javascript" src="./main.js"></script>
+
+</body>
+
+
+
+</html>
